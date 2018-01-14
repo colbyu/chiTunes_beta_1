@@ -42,3 +42,42 @@
     grid-row-start: 2;
     grid-row-end: 3;
 }
+about {
+    background-color: #2196F3;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 80px;
+    grid-gap: 2px;
+    background-color: #2196F3;
+    padding: 2px;
+}
+.footer-grid > div {
+    text-align: center;
+//border-style: solid;
+//border-width: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+//padding: 1px 0;
+//font-size: 30px;
+}
+.footerlogo {
+    //grid-column-start: 1;
+    //grid-column-end: 2;
+}
+.copyright {
+    //grid-column-start: 2;
+    //grid-column-end: 3;
+
+}
+.about {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2196F3;
+}
