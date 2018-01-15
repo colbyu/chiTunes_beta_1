@@ -80,8 +80,9 @@ body {
 h1, p {
     margin: 0 0 1em 0;
 }
-/* SEPARATED TO LOAD WHICHEVER GRID IS APROPOS. Using multiple selectors for a single set of properties fails here */
-/* This does give us some per-page flexibility, so... meh... ¯\_(ツ)_/¯ */
+/* Seperated each of these in the css to avoid a bug where when using multiple selectors for a property it only
+applies that property to the last selector */
+/* This does give us some per-page flexibility here too, so... meh, again... ¯\_(ツ)_/¯ */
 .contact-grid {
     max-width: 100%;
     display: grid;
@@ -116,7 +117,8 @@ h1, p {
     grid-column: 2;
     grid-row: 1 / 7;
 }
-/* SEPARATED TO LOAD WHICHEVER GRID IS APROPOS. Using multiple selectors for a single set of properties fails here */
+/* Seperated each of these in the css to avoid a bug where when using multiple selectors for a property it only
+applies that property to the last selector */
 /* This does give us some per-page flexibility here too, so... meh, again... ¯\_(ツ)_/¯ */
 .contact-grid > * {
     background-color: #444;
