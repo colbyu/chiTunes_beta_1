@@ -41,6 +41,7 @@ a:active {
     padding: 2px;
 }
 .header-grid > div {
+    border-radius: 5px;
     text-align: center;
     background-color: #444;
     color: #fff;
@@ -146,6 +147,7 @@ h1, p {
     padding: 2px;
 }
 .footer-grid > div {
+    border-radius: 5px;
     text-align: center;
     background-color: #444;
     color: #fff;
