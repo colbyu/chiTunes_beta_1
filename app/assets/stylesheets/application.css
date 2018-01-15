@@ -13,22 +13,37 @@
  *= require_tree .
  *= require_self
  */
+/* unvisited link */
+a:link {
+    color: #fff;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #fff;
+}
+
+/* selected link */
+a:active {
+    color: #fff;
+}
 .header-grid {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto;
     grid-template-rows: 20px 20px 20px;
     grid-gap: 2px;
-    background-color: #2196F3;
+    background-color: #fff;
     padding: 2px;
 }
 .header-grid > div {
     text-align: center;
-//border-style: solid;
-//border-width: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-//padding: 1px 0;
-//font-size: 30px;
+    background-color: #444;
+    color: #fff;
 }
 .logo {
     grid-column-start: 1;
@@ -42,29 +57,99 @@
     grid-row-start: 2;
     grid-row-end: 3;
 }
-about {
-    background-color: #2196F3;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(255, 255, 255, 0.8);
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 40px;
+    font-family: 'Open Sans', 'sans-serif';
+    background-color: #fff;
+    color: #444;
+}
+
+h1, p {
+    margin: 0 0 1em 0;
+}
+
+.wrapper {
+    max-width: 100%
+;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 10px;
+}
+
+@media screen and (min-width: 600px) {
+
+    /* no grid support? */
+    .block-a {
+        float: left;
+        width: 19.1489%;
+    }
+
+    .content {
+        float: right;
+        width: 79.7872%;
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        grid-template-columns: 1fr 3fr;
+        grid-auto-rows: minmax(150px, auto);
+    }
+
+    //.header {
+    //    grid-column: 1 / -1;
+    //   /* needed for the floated layout */
+    //    clear: both;
+    //}
+
+    .block-a {
+        grid-column: 1;
+        grid-row: 1 / 7;
+    }
+
+
+    .content {
+        grid-column: 2;
+        grid-row: 1 / 7;
+    }
+
+}
+
+.wrapper > * {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    /* needed for the floated layout*/
+    margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+    .wrapper > * {
+        width: auto;
+        margin: 0;
+    }
+}
 .footer-grid {
     display: grid;
     grid-template-columns: 80px auto;
-    grid-template-rows: 80px;
+    grid-template-rows: max-content;
     grid-gap: 2px;
-    background-color: #2196F3;
+    background-color: #fff;
     padding: 2px;
 }
 .footer-grid > div {
     text-align: center;
-//border-style: solid;
-//border-width: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-//padding: 1px 0;
-//font-size: 30px;
+    background-color: #444;
+    color: #fff;
+}
 }
 .footerlogo {
     //grid-column-start: 1;
@@ -74,10 +159,4 @@ about {
     //grid-column-start: 2;
     //grid-column-end: 3;
 
-}
-.about {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-style: solid;
-    border-width: 2px;
-    border-color: #2196F3;
-}
+}}
