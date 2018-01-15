@@ -39,6 +39,7 @@ a:active {
     grid-gap: 2px;
     background-color: #fff;
     padding: 2px;
+    margin-bottom: 8px;
 }
 .header-grid > div {
     border-radius: 5px;
@@ -76,8 +77,7 @@ h1, p {
 }
 
 .wrapper {
-    max-width: 100%
-;
+    max-width: 100%;
     margin: 0 20px;
     display: grid;
     grid-gap: 10px;
@@ -85,16 +85,6 @@ h1, p {
 
 @media screen and (min-width: 600px) {
 
-    /* no grid support? */
-    .block-a {
-        float: left;
-        width: 19.1489%;
-    }
-
-    .content {
-        float: right;
-        width: 79.7872%;
-    }
 
     .wrapper {
         margin: 0 auto;
@@ -127,8 +117,6 @@ h1, p {
     border-radius: 5px;
     padding: 20px;
     font-size: 150%;
-    /* needed for the floated layout*/
-    margin-bottom: 10px;
 }
 
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
@@ -145,6 +133,7 @@ h1, p {
     grid-gap: 2px;
     background-color: #fff;
     padding: 2px;
+    margin-top: 8px;
 }
 .footer-grid > div {
     border-radius: 5px;
