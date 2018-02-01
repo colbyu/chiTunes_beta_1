@@ -1,0 +1,22 @@
+<%= form_with(model: itemtype, local: true) do |form| %>
+  <% if itemtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(itemtype.errors.count, "error") %> prohibited this itemtype from being saved:</h2>
+
+      <ul>
+      <% itemtype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :itemtypedescription %>
+    <%= form.text_area :itemtypedescription, id: :itemtype_itemtypedescription %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

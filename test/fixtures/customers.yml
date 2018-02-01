@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  custfirstname: MyString
+  custlastname: MyString
+  custstreet: MyString
+  custcity: MyString
+  custstate: MyString
+  custzip: MyString
+
+two:
+  custfirstname: MyString
+  custlastname: MyString
+  custstreet: MyString
+  custcity: MyString
+  custstate: MyString
+  custzip: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_id: 1
+  album_id: 1
+  track_id: 1
+  itemtype_id: 1
+  ordertype_id: 1
+  order_id: 1
+
+two:
+  order_id: 1
+  album_id: 1
+  track_id: 1
+  itemtype_id: 1
+  ordertype_id: 1
+  order_id: 1

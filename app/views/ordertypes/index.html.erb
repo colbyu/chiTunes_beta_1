@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ordertypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ordertype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordertypes.each do |ordertype| %>
+      <tr>
+        <td><%= ordertype.ordertype %></td>
+        <td><%= link_to 'Show', ordertype %></td>
+        <td><%= link_to 'Edit', edit_ordertype_path(ordertype) %></td>
+        <td><%= link_to 'Destroy', ordertype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordertype', new_ordertype_path %>
