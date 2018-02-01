@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :orderitems
+  resources :ordertypes
+  resources :itemtypes
+  resources :genres
+  resources :artists
+  resources :albums
+  resources :customers
+  resources :orders
+  resources :tracks
   root  'home#index'
 
   get 'home/about'
