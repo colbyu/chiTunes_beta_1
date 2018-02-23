@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def index
+    @time = Time.now
   end
 
   def privacy
@@ -15,5 +16,15 @@ class HomeController < ApplicationController
   end
 
   def legal
+  end
+
+  def search
+    @results=0
+    if !params[:searchinput].nil?
+      @results=1
+      @searchinput = params[:searchinput]
+      @searchcriteria="%#{params[:searchinput]}%"
+      @albumlist = Album.where("albumname like ? or description like ?",@searchcriteria, @searchcriteria)
+    end
   end
 end

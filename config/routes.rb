@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'report/reportlist'
+
+  get 'report/custlist'
+
+  get 'report/prodlist'
+
+  get 'report/orderlist'
+
   resources :orderitems
   resources :ordertypes
   resources :itemtypes
@@ -21,6 +29,9 @@ Rails.application.routes.draw do
   get 'home/help'
 
   get 'home/legal'
+
+  get 'home/search'
+  post 'home/search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

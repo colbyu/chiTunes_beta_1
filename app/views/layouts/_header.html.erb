@@ -7,7 +7,12 @@
   <div class="contact">Link</div>
   <div class="contact">Link</div>
   <div class="contact">link to profile</div>
-  <div class="search">Search box goes here</div>
+  <div class="search"><td width='100%' align='left'>
+    <%= form_tag :controller => 'home', :action => 'search' do %>
+      <p>Search:
+        <%= text_field_tag 'searchinput', @searchinput %> </p>
+    <% end %>
+  </td></div>
   <div class="feature3">Log In</div>
   <div class="feature4">Create Account</div>
   <div class="feature3">feature item</div>

@@ -1,0 +1,27 @@
+<p> <h1>Search</h1> </p>
+<%= form_tag :action => 'search' do %>
+  <p>What album?:
+    <%= text_field_tag 'searchinput', @searchinput %> </p>
+  <%= submit_tag 'Search' %>
+<% end %>
+<hr/>
+<% if @results>0 %>
+  <% if @albumlist.length >0 %>
+    <p> Here are the search results:</p>
+    <p>
+    <table>
+      <tr>
+        <th>Album Name</th>
+        <th>Description</th>
+      </tr>
+      <% @albumlist.each do |a| %>
+        <tr>
+          <td><%= link_to a.albumname, album_path(a.id) %></td>
+          <td><%= c.description %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% else%>
+    <p>There were no albums with your search criteria. Try again!</p>
+  <% end %>
+<% end %>
