@@ -118,6 +118,7 @@ applies that property to the last selector */
     grid-column: 1;
     grid-row: 1 / 7;
     grid-gap: 50px;
+    font-size: smaller;
 }
 
 .contact-content, .index-content, .about-content {
@@ -148,7 +149,6 @@ applies that property to the last selector */
     color: #fff;
     border-radius: 5px;
     padding: 20px;
-    font-size: 150%;
     width: auto;
 }
 /*Footer formatting*/

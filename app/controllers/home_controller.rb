@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 
   def index
     @time = Time.now
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def privacy

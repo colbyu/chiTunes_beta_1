@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :promotions
   get 'report/reportlist'
 
   get 'report/custlist'
