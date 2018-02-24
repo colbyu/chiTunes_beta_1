@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
   def about
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def contact
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def index
@@ -11,12 +13,15 @@ class HomeController < ApplicationController
   end
 
   def privacy
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def help
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def legal
+    @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
 
   def search

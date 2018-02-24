@@ -7,15 +7,12 @@
   <div class="contact">Link</div>
   <div class="contact">Link</div>
   <div class="contact">link to profile</div>
-  <div class="search"><td width='100%' align='left'>
-    <%= form_tag :controller => 'home', :action => 'search' do %>
-      <p>Search:
-        <%= text_field_tag 'searchinput', @searchinput %> </p>
-    <% end %>
-  </td></div>
+  <div class="search"><%= form_tag :controller => 'home', :action => 'search' do %>
+      <%= text_field_tag 'searchinput', @searchinput, options = {style:"height:100%;border-radius:5px;width:100%;", placeholder:"Enter search terms, press enter tp search........"} %> </p>
+    <% end %></div>
   <div class="feature3">Log In</div>
   <div class="feature4">Create Account</div>
-  <div class="feature3">feature item</div>
+  <div class="feature3"></div>
   <div class="feature4">feature item</div>
   <div class="feature4">feature item</div>
   <div class="feature4">feature item</div>
