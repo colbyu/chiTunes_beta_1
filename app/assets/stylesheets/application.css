@@ -114,21 +114,35 @@ applies that property to the last selector */
     grid-template-columns: 1fr 4.2fr;
     grid-auto-rows: minmax(150px, auto);
 }
-
-.contact-sidebar, .index-sidebar, .about-sidebar {
+.report-grid {
+    max-width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 4.2fr;
+    grid-auto-rows: minmax(150px, auto);
+}
+.contact-sidebar, .index-sidebar, .about-sidebar, .report-sidebar {
     grid-column: 1;
     grid-row: 1 / 7;
     grid-gap: 50px;
     font-size: smaller;
 }
 
-.contact-content, .index-content, .about-content {
+.contact-content, .index-content, .about-content, .report-content {
     grid-column: 2;
     grid-row: 1 / 7;
 }
 /* Seperated each of these in the css to avoid a bug where when using multiple selectors for a property it only
 applies that property to the last selector */
 /* This does give us some per-page flexibility here too, so... meh, again... ¯\_(ツ)_/¯ */
+.report-grid > * {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: auto;
+}
 .contact-grid > * {
     background-color: #444;
     color: #fff;
