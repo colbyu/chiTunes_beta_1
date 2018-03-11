@@ -17,7 +17,7 @@
       <% @albumlist.each do |a| %>
         <tr>
           <td><%= link_to a.albumname, album_path(a.id) %></td>
-          <td><%= c.description %></td>
+          <td><%= a.description %></td>
         </tr>
       <% end %>
     </table>
