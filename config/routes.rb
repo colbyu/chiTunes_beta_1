@@ -39,11 +39,16 @@ Rails.application.routes.draw do
 
   get 'home/search'
   post 'home/search'
-
+  post 'home/buy'
   get 'login', to: 'sessions#new', as: 'login'
   delete 'logout', to: 'sessions#destroy', as: 'logout'
   resources :sessions
 
+  get 'home/catalog'
+  post 'home/buy'
+  post 'home/updatecart'
+  post 'home/checkout'
+  get 'cart', to: 'home#cart', as: 'cart'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 

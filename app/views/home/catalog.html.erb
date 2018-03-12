@@ -1,0 +1,15 @@
+<h1>Our Catalog </h1>
+<% @prod.each do |p| %>
+  <product>
+    <table width='100%'>
+      <tr><td align='center'><b><%= link_to p.trackname, track_path(p.id) %> </b></td></tr>
+      <tr><td align='center'>
+        <%= form_tag :controller => 'home', :action => 'buy' do %>
+          <b>Price:</b> <%= number_to_currency(0.99) %>
+          <%= hidden_field_tag 'prodid', "#{p.id}" %> </br>
+          <%= submit_tag 'Add To Cart', :class => 'button1' %>
+        <% end %>
+      </td></tr>
+    </table>
+  </product>
+<% end %>
