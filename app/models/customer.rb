@@ -6,5 +6,9 @@ class Customer < ApplicationRecord
   validates :custstate, presence: true
   validates :custzip, presence: true
 
+  validates :username, presence:true, uniqueness:true
+  has_secure_password
+
   has_many :order, dependent: :destroy
 end
+

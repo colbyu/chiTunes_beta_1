@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  skip_before_action :authorize , :only => [:show]
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   # GET /artists

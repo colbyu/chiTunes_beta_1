@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223020615) do
+ActiveRecord::Schema.define(version: 20180312021642) do
 
   create_table "albums", force: :cascade do |t|
     t.string "albumname"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20180223020615) do
     t.string "custzip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password_digest"
   end
 
   create_table "genres", force: :cascade do |t|

@@ -1,4 +1,5 @@
 class TracksController < ApplicationController
+  skip_before_action :authorize , :only => [:show]
   before_action :set_track, only: [:show, :edit, :update, :destroy]
 
   # GET /tracks

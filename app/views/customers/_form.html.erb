@@ -41,6 +41,20 @@
     <%= form.text_field :custzip, id: :customer_custzip %>
   </div>
 
+<%= form.label :username %>
+    <%= form.text_field :username, id: :customer_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :customer_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.text_field :password_confirmation, id: :customer_password_confirmation %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

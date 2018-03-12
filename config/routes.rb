@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resources :promotions
   get 'report/reportlist'
 
@@ -33,6 +39,10 @@ Rails.application.routes.draw do
 
   get 'home/search'
   post 'home/search'
+
+  get 'login', to: 'sessions#new', as: 'login'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
+  resources :sessions
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

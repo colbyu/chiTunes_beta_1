@@ -1,4 +1,5 @@
 class AlbumsController < ApplicationController
+  skip_before_action :authorize , :only => [:show]
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
   # GET /albums

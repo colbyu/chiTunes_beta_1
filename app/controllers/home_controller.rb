@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  skip_before_action :authorize
   def about
     @promotions = Promotion.where("startdate <= ? AND enddate >= ?", Date.today, Date.today)
   end
