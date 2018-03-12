@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @customer_choice = Customer.order("custlastname").collect do |c| [c.custlastname + "," + c.custfirstname, c.id] end
   end
 
   # GET /orders/1/edit

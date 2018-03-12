@@ -5,4 +5,6 @@ class Customer < ApplicationRecord
   validates :custcity, presence: true
   validates :custstate, presence: true
   validates :custzip, presence: true
+
+  has_many :order, dependent: :destroy
 end

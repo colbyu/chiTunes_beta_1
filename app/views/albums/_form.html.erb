@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :artist_id %>
-    <%= form.number_field :artist_id, id: :album_artist_id %>
+    <%= form.select :artist_id, @artist_choice %>
   </div>
 
   <div class="actions">

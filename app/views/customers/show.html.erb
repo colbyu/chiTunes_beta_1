@@ -29,6 +29,20 @@
   <strong>Custzip:</strong>
   <%= @customer.custzip %>
 </p>
-
+<hr>
+<p> This customer's orders:</p>
+<table>
+  <tr>
+    <th>Payment Type</th>
+    <th>Date</th>
+  </tr>
+  <% @orders.each do |x| %>
+  <tr>
+    <td><%= x.paymenttype %></td>
+     <td><%= x.orderdate %> </td>
+  </tr>
+  <% end %>
+  </table>
+<hr>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
