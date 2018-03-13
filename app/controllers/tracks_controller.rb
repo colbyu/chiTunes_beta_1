@@ -22,6 +22,8 @@ class TracksController < ApplicationController
 
   # GET /tracks/1/edit
   def edit
+    @artist_choice = Artist.order("artistname").collect do |a| [a.artistname, a.id] end
+    @album_choice = Album.order("albumname").collect do |b| [b.albumname, b.id] end
   end
 
   # POST /tracks
