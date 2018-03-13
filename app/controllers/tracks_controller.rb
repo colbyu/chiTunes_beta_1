@@ -28,7 +28,8 @@ class TracksController < ApplicationController
   # POST /tracks.json
   def create
     @track = Track.new(track_params)
-
+    @artist_choice = Artist.order("artistname").collect do |a| [a.artistname, a.id] end
+    @album_choice = Album.order("albumname").collect do |b| [b.albumname, b.id] end
     respond_to do |format|
       if @track.save
         format.html { redirect_to @track, notice: 'Track was successfully created.' }
