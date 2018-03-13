@@ -48,7 +48,7 @@ class HomeController < ApplicationController
     cartlen = session[:cart_prod].length
     i=0
     if cartlen > 0
-      orderid = Order.create(customer_id: session[:user_id], orderdate: Date.today, paymenttype: session[:cart_prod].to_s)
+      orderid = Order.create(customer_id: session[:user_id], orderdate: Date.today, paymenttype: "Online Order")
       while i < cartlen
   #      Orderitem.create(order_id: orderid.id, track_id: session[:cart_prod][i].to_i, saleprice: Track.find(session[:cart_prod][i].to_i).saleprice, prodqty: session[:cart_qty][i])
         i = i + 1
