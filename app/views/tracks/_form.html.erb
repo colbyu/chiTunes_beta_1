@@ -26,6 +26,11 @@
     <%= form.select :album_id, @album_choice %>
   </div>
 
+  <div class="field">
+    <%= form.label :trackprice %>
+    <%= form.text_field :trackprice, id: :trackprice %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

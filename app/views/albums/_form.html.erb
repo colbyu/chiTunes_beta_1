@@ -31,6 +31,11 @@
     <%= form.select :artist_id, @artist_choice %>
   </div>
 
+  <div class="field">
+    <%= form.label :albumprice %>
+    <%= form.text_field :albumprice, id: :albumprice %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
